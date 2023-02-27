@@ -1,0 +1,50 @@
+:root{
+    --color-main: #0B1727;
+}
+
+
+
+
+/* general style */
+.d-flex{
+    display: flex;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.content_hero video{
+    width: 100%;
+}
+
+header.header{
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-main);
+}
+.sec_girl{
+    position: relative;
+}
+.sec_girl .img_back_girl{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.content_sec_girl{
+    position: relative;
+    border: 1px solid red;
+}
+.sec_girl_left{
+    display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-content: center;
+}
+.sec_girl_right{
+    display: flex;
+    align-items: flex-end;
+}
+.sec_girl_right img{
+
+}
