@@ -1,5 +1,25 @@
 :root{
     --color-main: #0B1727;
+    --color-back-card: #081522;
+    --color-yellow: #F3BD36;
+    --color-green: #08F2B6;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-cld: #5068B2;
+    --color-ssd: #E16258;
+    --color-exp: #C8D002;
+    --color-soc: #FD18FD;
+    --color-pen-200: #F77122;
+    --color-pen-210: #1875C2;
+    --color-pen-300: #4FCF66;
+    --color-web-200: #E13F78;
+    --color-exp-301: #569F80;
+    --color-web-300: #09A5A5;
+    --color-exp-312: #4B51DC;
+    --color-soc-200: #08CEE4;
+    --color-exp-401: #E32B22;
+
+    --container: 1280px;
 }
 
 
@@ -8,10 +28,23 @@
 /* general style */
 .d-flex{
     display: flex;
+    flex-wrap: wrap;
+}
+.f-50{
+    flex-basis: 50%;
 }
 .container{
-    max-width: 1200px;
+    max-width: var(--container);
     margin: auto;
+}
+/* general style */
+body{
+    background-color: var(--color-main);
+}
+
+
+.content_hero{
+    height: 100%;
 }
 .content_hero video{
     width: 100%;
@@ -19,11 +52,42 @@
 
 header.header{
     width: 100%;
-    height: 100px;
     background-color: var(--color-main);
+    background-image: url(../img/barra-topo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.content_header{
+    padding: 30px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav.menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav.menu ul.list_menu{
+    display: flex;
+    align-items: center;
+}
+nav.menu ul.list_menu li a{
+    color: var(--color-white);
+    padding: 2px 20px;
 }
 .sec_girl{
     position: relative;
+    min-height: 100vh;
+    margin-top: -100px;
+    display: flex;
+    background-image: url(../img/background-banner-min.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -200px;
+    padding: 40px 10px;
 }
 .sec_girl .img_back_girl{
     width: 100%;
@@ -33,18 +97,201 @@ header.header{
 }
 .content_sec_girl{
     position: relative;
-    border: 1px solid red;
+    height: 100vh;
+    padding: 100px 10px 0;
 }
 .sec_girl_left{
     display: flex;
    flex-wrap: wrap;
-   flex-direction: column;
    align-content: center;
+}
+.sec_girl_left img{
+    margin-bottom: 40px;
+}
+.sec_girl_left h2{
+    color: var(--color-yellow);
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.sec_girl_left p{
+    color: var(--color-white);
+    font-size: 1.2em;
+    margin-bottom: 40px;
 }
 .sec_girl_right{
     display: flex;
     align-items: flex-end;
 }
 .sec_girl_right img{
+    max-width: 100%;
+}
+.btn_girl{
+    margin-bottom: 80px;
+    cursor: pointer;
+    transition: all .23s;
+}
+.btn_girl:hover{
+    transform: scale(1.1);
+}
 
+.sec_courses{
+    background-image: url(../img/background-cursos-min.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    margin-top: -280px;
+    z-index: 1;
+    position: relative;
+    padding: 250px 10px 0;
+}
+.header_sec_courses{
+    padding: 20px 10px;
+    width: 70%;
+}
+.header_sec_courses h2{
+    color: var(--color-yellow);
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+.header_sec_courses p{
+    color: var(--color-white);
+    font-size: 2.3em;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+
+/* ======== card course ================ */
+.card_course{
+    flex-basis: calc(33% - 20px);
+    margin: 10px;
+    position: relative;
+    background-color: rgba(10, 23, 38, .7);
+    border-radius: 20px;
+    padding: 20px;
+    transition: all .23s;
+}
+.line_card_course{
+    width: 100%;
+    height: auto;
+    transition: all .23s;
+}
+
+.card_pen h3{
+    color: var(--color-green);
+}
+.card_cld h3{
+    color: var(--color-cld);
+}
+.card_ssd h3{
+    color: var(--color-ssd);
+}
+.card_exp h3{
+    color: var(--color-exp);
+}
+.card_soc h3{
+    color: var(--color-soc);
+}
+.card_web h3{
+    color: var(--color-web-300);
+}
+.card_pen_200 h3{
+    color: var(--color-pen-200);
+}
+.card_pen_210 h3{
+    color: var(--color-pen-210);
+}
+.card_pen_300 h3{
+    color: var(--color-pen-300);
+}
+.card_web_200 h3{
+    color: var(--color-web-200);
+}
+.card_web_300 h3{
+    color: var(--color-web-300);
+}
+.card_exp_301 h3{
+    color: var(--color-exp-301);
+}
+.card_exp_312 h3{
+    color: var(--color-exp-312);
+}
+.card_exp_401 h3{
+    color: var(--color-exp-401);
+}
+.card_soc_200 h3{
+    color: var(--color-soc-200);
+}
+.card_course:hover .line_card_course{
+    transform: scale(1.03);
+}
+.card_pen:hover{
+    box-shadow: 1px 1px 10px var(--color-green);
+}
+.card_cld:hover{
+    box-shadow: 1px 1px 10px var(--color-cld);
+}
+.card_ssd:hover{
+    box-shadow: 1px 1px 10px var(--color-ssd);
+}
+.card_exp:hover{
+    box-shadow: 1px 1px 10px var(--color-exp);
+}
+.card_soc:hover{
+    box-shadow: 1px 1px 10px var(--color-soc);
+}
+.card_web:hover{
+    box-shadow: 1px 1px 10px var(--color-green);
+}
+.card_pen_200:hover{
+    box-shadow: 1px 1px 10px var(--color-pen-200);
+}
+.card_pen_210:hover{
+    box-shadow: 1px 1px 10px var(--color-pen-210);
+}
+.card_pen_300:hover{
+    box-shadow: 1px 1px 10px var(--color-pen-300);
+}
+.card_web_200:hover{
+    box-shadow: 1px 1px 10px var(--color-web-200);
+}
+.card_web_300:hover{
+    box-shadow: 1px 1px 10px var(--color-web-300);
+}
+.card_exp_301:hover{
+    box-shadow: 1px 1px 10px var(--color-exp-301);
+}
+.card_exp_312:hover{
+    box-shadow: 1px 1px 10px var(--color-exp-312);
+}
+.card_exp_401:hover{
+    box-shadow: 1px 1px 10px var(--color-exp-401);
+}
+.card_soc_200:hover{
+    box-shadow: 1px 1px 10px var(--color-soc-200);
+}
+.content_card_course{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 10px;
+    text-align: center;
+    color: var(--color-white);
+}
+.content_card_course img{
+    height: 40%;
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.content_card_course h3{
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+.content_card_course p{
+    font-size: 3.5em;
+    font-weight: bold;
 }
