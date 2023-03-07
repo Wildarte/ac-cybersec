@@ -519,6 +519,33 @@ nav.menu ul li:hover  a::after{
     }
 }
 
+@media(max-width: 1530px){
+    .last_bg{
+        left: -200px;
+    }
+}
+
+@media(max-width: 1180px){
+    .last_bg{
+        left: -300px;
+    }
+}
+
+@media(max-width: 980px){
+    .content_curso{
+        height: auto;
+    }
+    .content_card_course p{
+        font-size: 2em;
+    }
+    .card_course{
+        flex-basis: calc(50% - 20px);
+    }
+    .header_curso img{
+        width: 100%;
+        position: unset;
+    }
+}
 
 @media(max-width: 768px){
     .f-50{
@@ -534,9 +561,7 @@ nav.menu ul li:hover  a::after{
         width: 60%;
         margin: auto;
     }
-    .card_course{
-        flex-basis: calc(50% - 20px);
-    }
+
     .header_sec_courses{
         width: 100%;
     }
@@ -545,10 +570,6 @@ nav.menu ul li:hover  a::after{
     }
     .header_sec_courses h2, .header_universo h2, .sec_girl_left h2{
         font-size: 3.5em;
-    }
-    .header_curso img{
-        width: 100%;
-        position: unset;
     }
     .last_bg{
         left: -300px;
@@ -603,7 +624,7 @@ nav.menu ul li:hover  a::after{
         padding-top: 150px;
     }
     .card_course{
-        flex-basis: calc(50% - 10px);
+        flex-basis: calc(100% - 10px);
         margin: 5px;
     }
     .content_card_course img{
@@ -624,20 +645,20 @@ nav.menu ul li:hover  a::after{
 }
 @media(max-width: 420px){
     .header_sec_courses h2, .header_universo h2, .sec_girl_left h2{
-        font-size: 1.5em;
+        font-size: 1.65em;
     }
     .sec_girl_left p, .header_sec_courses p{
-        font-size: 1em;
+        font-size: 1.2em;
         text-align: justify;
     }
     .content_sec_girl{
         padding: 100px 0 0;
     }
     .sec_courses{
-        padding-top: 250px;
         background-image: unset;
         background-color: #0C1C30;
         margin-top: -150px;
+        padding: 250px 10px 220px;
         padding-top: 60px;
     }
     .curso_left{
@@ -671,5 +692,27 @@ nav.menu ul li:hover  a::after{
     .sec_girl_right img, .curso_right img{
         max-width: 70%;
         margin: auto;
+    }
+    .img_group img{
+        width: 80%;
+        margin: auto;
+    }
+    .bottom_two_img_group{
+        text-align: center;
+    }
+    .col_two_img_group, .col_one_img_group, .col_center_img_group{
+        text-align: center;
+    }
+    .sec_girl_left img, .curso_left .btn_girl{
+        width: 75%;
+    }
+    .content_curso{
+        margin: 0;
+    }
+    .content_curso{
+        padding-top: 80px;
+    }
+    .sec_curso{
+        min-height: unset;
     }
 }
