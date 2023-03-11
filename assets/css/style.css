@@ -36,8 +36,15 @@
 .f-50{
     flex-basis: 50%;
 }
+.f-25{
+    flex-basis: 25%;
+}
 .container{
     max-width: var(--container);
+    margin: auto;
+}
+.container-min{
+    max-width: 1000px;
     margin: auto;
 }
 .color-pink{
@@ -49,6 +56,9 @@
 .d-none{
     display: none;
 }
+.color-blue{
+    color: var(--color-green);
+}
 /* general style */
 body{
     background-color: var(--color-main);
@@ -56,6 +66,14 @@ body{
 }
 body img{
     image-rendering: -webkit-optimize-contrast;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+    background-image: linear-gradient(to bottom, var(--color-green), var(--color-soc-200));
+}
+body::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(to bottom, var(--color-back-card), var(--color-cld));
+    border-radius: 10px;
 }
 
 
@@ -411,7 +429,7 @@ nav.menu ul li:hover  a::after{
     min-height: 100vh;
     margin-top: -100px;
     display: flex;
-    background-image: url(../img/a-aula-1-background-min.png);
+    background-image: url(../img/bg-aula1-alternative.png);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -459,10 +477,16 @@ nav.menu ul li:hover  a::after{
 }
 .sec_universo{
     position: relative;
-    background-color: var(--color-main-2);
+    background-color: transparent;
+    background-image: url(../img/universo-ac-background.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-bottom: 600px;
     z-index: 1;
     margin-top: -10px;
+    padding: 200px 10px 100px;
+    margin-top: -250px;
 }
 .sec_universo::before{
     display: none;
@@ -513,6 +537,135 @@ nav.menu ul li:hover  a::after{
     margin-left: -10%
 }
 
+.btn_mobile, .header_menu_mobile{
+    display: none;
+}
+
+footer.footer{
+    background-color: var(--color-main);
+    color: var(--color-white);
+    border-top: 1px solid #777777;
+}
+.content_footer{
+    padding: 60px 10px;
+}
+.col_footer{
+    padding: 10px;
+}
+.col_footer h3{
+    font-size: 1.6em;
+    margin-bottom: 20px;
+}
+.col_footer p{
+    font-size: .9em;
+    line-height: 1.5em;
+    color: #aaaaaa;
+}
+.content_bottom_footer{
+    padding: 10px;
+}
+.bottom_footer{
+    border-top: 1px solid #777777;
+}
+.bottom_footer img{
+    width: 250px;
+    margin: auto 0;
+}
+.group_img_mobile{
+    display: none;
+}
+.bottom_sec_universo{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.bottom_sec_universo img{
+    margin: auto;
+}
+
+
+
+/* page cursos  */
+.head_cursos{
+    height: 80vh;
+}
+.content_head_cursos{
+    background-image: url(../img/pen-100-min.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+.left_header{
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    padding-top: 80px;
+}
+.left_header img{
+    width: 50%;
+    margin-bottom: 40px;
+}
+.left_header h2{
+    width: 100%;
+    text-align: center;
+    font-size: 5.5em;
+    color: var(--color-white);
+    margin: 0;
+}
+.left_header p{
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-green);
+}
+.info_curso h2{
+    font-size: 2em;
+    color: var(--color-green);
+    margin-bottom: 20px;
+}
+.info_curso p{
+    color: var(--color-white);
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.content_info_curso{
+    background-image: url(../img/bk-texto-cursos-min.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 150px 10px;
+    margin-top: -150px;
+    position: relative;
+    z-index: 100;
+}
+.head_about_cursos{
+    padding: 20px;
+}
+.head_about_cursos h2{
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: var(--color-white);
+}
+.sec_cursos_about {
+    background-image: url(../img/background-cursos-min.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    margin-top: -280px;
+    z-index: 1;
+    position: relative;
+    padding: 250px 10px 220px;
+}
+.content_sec_cursos_about{
+    padding: 60px 10px;
+}
+/* page cursos */
+
+
 @media(min-width: 1921px){
     .cointainer{
         max-width: 1500px;
@@ -529,6 +682,10 @@ nav.menu ul li:hover  a::after{
     .last_bg{
         left: -300px;
     }
+    .content_curso{
+        height: auto;
+    }
+    .curso_right img{}
 }
 
 @media(max-width: 980px){
@@ -545,6 +702,108 @@ nav.menu ul li:hover  a::after{
         width: 100%;
         position: unset;
     }
+    .btn_mobile{
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        cursor: pointer;
+    }
+    .btn_mobile .rec{
+        width: 100%;
+        height: calc(20% - 5px);
+        margin: 3px 0;
+        background-color: var(--color-white);
+        border-radius: 2px;
+    }
+    .btn_mobile .rec:first-child{
+        width: 80%;
+    }
+    .btn_mobile .rec:last-child{
+        width: 80%;
+    }
+    nav.menu ul li a::before{
+        display: none;
+    }
+    nav.menu ul li a::after{
+        display: none;
+    }
+    nav.menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: var(--color-back-card);
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        padding: 10px;
+        transition: all .18s;
+    }
+    .open_menu_mobile{
+        left: 0!important;
+    }
+    nav.menu ul.list_menu{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 0;
+        width: 100%;
+    }
+    nav.menu ul.list_menu li{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    nav.menu ul.list_menu li a{
+        padding: 5px 10px;
+    }
+    .cta_over{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .header_menu_mobile{
+        text-align: left;
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+    .log_menu_mobile{
+        width: auto;
+        height: 20px;
+    }
+    .btn_close_menu{
+        width: 20px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+    .btn_close_menu img{
+        width: 100%;
+    }
+    .content_sec_girl{
+        padding: 180px 10px 0;
+    }
+    .header_sec_courses h2{
+        font-size: 3.5em;
+    }
+    .header_sec_courses p{
+        font-size: 2em;
+    }
+    .f-25{
+        flex-basis: 100%;
+    }
+    .header_curso{
+        height: auto;
+    }
+    .header_universo h2{
+        font-size: 3.5em;
+    }
 }
 
 @media(max-width: 768px){
@@ -553,6 +812,7 @@ nav.menu ul li:hover  a::after{
     }
     .content_sec_girl{
         height: auto;
+        padding: 120px 10px 0;
     }
     .sec_girl{
         padding-top: 160px;
@@ -580,9 +840,7 @@ nav.menu ul li:hover  a::after{
     .sec_courses{
         background-image: url(../img/background-cursos-mobile.png);
     }
-    nav.menu{
-        display: none;
-    }
+
     .sec_girl_left p, .header_sec_courses p{
         font-size: 1.5em;
     }
@@ -605,8 +863,34 @@ nav.menu ul li:hover  a::after{
         flex-basis: 50%;
     }
     .img_group img{
-        width: calc(100% - 20px);
+        width: 120%;
         margin: 10px;
+        margin-left: -20%;
+    }
+    .header_curso{
+        height: auto;
+    }
+    .group_img_desktop{
+        display: none;
+    }
+    .group_img_mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+    .group_img_mobile img{
+        width: 50%;
+        height: auto;
+    }
+    .content_head_cursos{
+        background-position: left;
+    }
+    .content_info_curso{
+        padding: 200px 10px 300px;
+    }
+    .sec_cursos_about{
+        margin-top: -350px;
     }
 }
 
@@ -642,10 +926,36 @@ nav.menu ul li:hover  a::after{
     .img_group{
         padding: 0;
     }
+    .group_img_mobile img{
+        width: 100%;
+        height: auto;
+    }
+    .header_universo h2{
+        position: unset;
+    }
+    .content_info_curso{
+        margin-top: -230px;
+    }
+    .left_header h2{
+        font-size: 4em;
+    }
+    .left_header p{
+        font-size: 1.5em;
+    }
+    .info_curso h2{
+        font-size: 1.6em;
+    }
+    .info_curso p{
+        font-size: 1em;
+    }
+    .sec_cursos_about{
+        margin-top: -490px;
+        padding-top: 300px;
+    }
 }
 @media(max-width: 420px){
     .header_sec_courses h2, .header_universo h2, .sec_girl_left h2{
-        font-size: 1.65em;
+        font-size: 1.55em;
     }
     .sec_girl_left p, .header_sec_courses p{
         font-size: 1.2em;
@@ -684,7 +994,8 @@ nav.menu ul li:hover  a::after{
     .sec_universo{
         overflow-x: hidden;
         margin-top: -120px;
-        padding-top: 60px;
+        padding: 100px 10px;
+        background-image: url(../img/bg-universo-mobile.png);
     }
     .col_two_img_group, .col_one_img_group, .col_center_img_group{
         flex-basis: 100%;
@@ -714,5 +1025,33 @@ nav.menu ul li:hover  a::after{
     }
     .sec_curso{
         min-height: unset;
+    }
+    .content_header{
+        padding: 15px 10px;
+    }
+    .btn_mobile{
+        width: 30px;
+        height: 30px;
+    }
+    .btn_mobile .rec{
+        height: calc(23% - 5px);
+    }
+    .col_footer{
+        padding: 10px 0;
+    }
+    .col_footer img{
+        margin-bottom: 20px;
+    }
+    .head_cursos{
+        height: auto;
+    }
+    .head_about_cursos h2{
+        font-size: 1.5em;
+    }
+    .left_header{
+        padding-bottom: 80px;
+    }
+    .content_head_cursos{
+        padding-bottom: 150px;
     }
 }

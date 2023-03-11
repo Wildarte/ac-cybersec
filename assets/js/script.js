@@ -20,6 +20,17 @@ let up_img = 150; //para controlar o movimento da imagem
 let up_img2 = 200; //para controlar o movimento da imagem
 let lastScroll = 0;
 let lastScroll2 = 0;
+
+els.forEach((item) => {
+
+    if(isOnScreen(item)){
+        item.classList.add( 'animate__animated', 'animate__bounceIn');
+        item.style.setProperty('--animate-delay', '2s')
+        item.style.setProperty('--animate-duration', '1s');
+    }
+
+});
+
 document.addEventListener('scroll', (e) => {
     els.forEach((item) => {
 
@@ -122,3 +133,18 @@ document.addEventListener('scroll', (e) => {
 
 })
     
+
+
+
+//===================== menu mobile control =========================================
+const btn_mobile = document.querySelector('.btn_mobile'); //botao menu mobile
+const btn_close_menu = document.querySelector('.btn_close_menu'); //botao close menu mobile
+const nav_menu = document.querySelector('nav.menu');//menu
+
+btn_mobile.addEventListener('click', () => {
+    nav_menu.classList.add('open_menu_mobile');
+});
+btn_close_menu.addEventListener('click', () => {
+    nav_menu.classList.remove('open_menu_mobile');
+});
+//===================== menu mobile control =========================================
